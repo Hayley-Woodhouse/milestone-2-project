@@ -15,6 +15,10 @@ This website is designed to provide a fun, simple and well-balanced user experie
 * [4 Structure](#4-structure)
     * [4.1 Initial Page structure](#41-initial-page-structure)
 * [5 Skeleton](#5-skeleton)
+    * [5.1 Wireframes](#51-wireframes)
+        * [5.1.1 Opening Page](#511-opening-page)
+        * [5.1.2 Game Layout](#512-game-layout)
+
 
 
 
@@ -88,5 +92,73 @@ The features acknowledged from the scope plane will be implemented into the foll
 
 # 5 Skeleton
 
+## 5.1 Wireframes
+
+The wireframes for the website was created using [Balsamiq Wireframes]( https://balsamiq.com/). Using the structure plane the following mock-ups were generated.  
+
+### 5.1.1 Opening Page
+
+The pop-up user login option will be displayed on the opening page. This has an skip option. The username will be then used to log the users games results to the score board. If the pop-up is skipped the users score board name will be logsed as unknown.
+
+![user mobile wireframe](assets/images-readme/user-mob.png)
+
+compressed from 51.1 KB to 16.6 KB via [TinyPNG](https://tinypng.com/)
+![user tablet wirefreme](assets/images-readme/user-pad.png)
+
+compressed from 48.8 KB to 16.1KB via [TinyPNG](https://tinypng.com/)
+
+![user laptop wireframe](assets/images-readme/user-lap.png)
+compressed from 69.8 KB to 24.4 KB via [TinyPNG](https://tinypng.com/)
+
+### 5.1.2 Game Layout
+
+
+
+![game mobile wireframe](assets/images-readme/game-mob.png)
+compressed from 70.7 KB to 22.8 KB via [TinyPNG](https://tinypng.com/)
+
+![game tablet wireframe](assets/images-readme/game-pad.png)
+compressed from 68.4 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)
+
+![game laptop wireframe](assets/images-readme/game-lap.png)
+compressed from 100.5 KB to 35.2 KB via [TinyPNG](https://tinypng.com/)
+
+### 5.1.3 Instructions
+
+![instructions mobile wireframe](assets/images-readme/inst-mob.png)
+compressed from 68.5 KB to 24.8 KB via [TinyPNG](https://tinypng.com/)
+
+![instructions tablet wireframe](assets/images-readme/inst-pad.png)
+compressed from 67.0 KB to 23.3 KB via [TinyPNG](https://tinypng.com/)
+
+![instructions laptop wireframe](assets/images-readme/inst-lap.png)
+compressed from 81.3 KB to 29.5 KB via [TinyPNG](https://tinypng.com/)
+
+![score mobile wireframe](assets/images-readme/score-mob.png)
+compressed from 42.1 KB to 12.7 KB via [TinyPNG](https://tinypng.com/)
+
+![score tablet wireframe](assets/images-readme/score-pad.png)
+compressed from 40.4 KB to 12.0 KB via [TinyPNG](https://tinypng.com/)
+
+![score laptop wireframe](assets/images-readme/score-lap.png)
+compressed from 61.2 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)
+
+![settings mobile wireframe](assets/images-readme/set-mob.png)
+compressed from 41.5 KB to 13.1 KB via [TinyPNG](https://tinypng.com/)
+
+![settings tablet wireframe](assets/images-readme/set-pad.png)
+compressed from 36.6 KB to 12.3 KB via [TinyPNG](https://tinypng.com/)
+
+![settings laptop wireframe](assets/images-readme/set-lap.png)
+compressed from 62.6 KB to 22.4 KB via [TinyPNG](https://tinypng.com/)
+
+![congratulations mobile wireframe](assets/images-readme/congr-mob.png)
+compressed from 50.0 KB to 16.3 KB via [TinyPNG](https://tinypng.com/)
+
+![congratulations tablet wireframe](assets/images-readme/congr-pad.png)
+compressed from 43.7 KB to 13.9 KB via [TinyPNG](https://tinypng.com/)
+
+![congratulations laptop wireframe](assets/images-readme/congr-lap.png)
+compressed from 64.5 KB to 22.1 KB via [TinyPNG](https://tinypng.com/)
 
 
