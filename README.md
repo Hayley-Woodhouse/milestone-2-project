@@ -17,7 +17,7 @@ This website is designed to provide a fun, simple and well-balanced user experie
 * [5 Skeleton](#5-skeleton)
     * [5.1 Wireframes](#51-wireframes)
         * [5.1.1 Opening Page](#511-opening-page)
-        * [5.1.2 Game Layout](#512-game-layout)
+        * [5.1.2 Layout](#512-layout)
         * [5.1.3 Instructions](#513-instructions)
         * [5.1.4 Score Board](#514-score-board)
         * [5.1.5 Settings](#515-settings)
@@ -121,83 +121,125 @@ The wireframes for the website was created using [Balsamiq Wireframes]( https://
 
 ### 5.1.1 Opening Page
 
-The pop-up user login option will be displayed on the opening page. This has an skip option. The username will be then used to log the users games results to the score board. If the pop-up is skipped the users score board name will be logsed as unknown.
+The pop-up user login will contain a skip option. If the user enters a name into the field, then this will be referred to when the results of the played game are added to the score board. If the user clicks skip, then the score board will register the username “unknown”.
 
 ![user mobile wireframe](assets/images-readme/user-mob.png)
 
 compressed from 51.1 KB to 16.6 KB via [TinyPNG](https://tinypng.com/)
+
 ![user tablet wirefreme](assets/images-readme/user-pad.png)
 
 compressed from 48.8 KB to 16.1KB via [TinyPNG](https://tinypng.com/)
 
 ![user laptop wireframe](assets/images-readme/user-lap.png)
+
 compressed from 69.8 KB to 24.4 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
-### 5.1.2 Game Layout
+### 5.1.2 Layout
+
+When the opening page pop-up has be completed the user will be presented with the simple screen layout. A default game set at difficulty ‘easy’ will be ready to start. The time will be set to 0.00 and will begin with the click of the first card. 
+
+### Nav bar
+
+The nav bar will have four options 
+1 difficulty level
+2 instructions 
+3 scores
+4 settings 
+
+Difficulty level can be change via a dropdown menu with three options. Easy, medium, and hard. 
+
+### Footer
+
+The footer comprises of three social media links. Twitter, Facebook, and Instagram. The web designer name with a link to their details.
 
 
 
 ![game mobile wireframe](assets/images-readme/game-mob.png)
+
 compressed from 70.7 KB to 22.8 KB via [TinyPNG](https://tinypng.com/)
 
 ![game tablet wireframe](assets/images-readme/game-pad.png)
+
 compressed from 68.4 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)
 
 ![game laptop wireframe](assets/images-readme/game-lap.png)
+
 compressed from 100.5 KB to 35.2 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
 ### 5.1.3 Instructions
 
+On click a pop-out will appear and fill the screen. The information will give context as to the operation of the game, how to change settings, difficulty and to check scores. 
+
+
 ![instructions mobile wireframe](assets/images-readme/inst-mob.png)
+
 compressed from 68.5 KB to 24.8 KB via [TinyPNG](https://tinypng.com/)
 
 ![instructions tablet wireframe](assets/images-readme/inst-pad.png)
+
 compressed from 67.0 KB to 23.3 KB via [TinyPNG](https://tinypng.com/)
 
 ![instructions laptop wireframe](assets/images-readme/inst-lap.png)
+
 compressed from 81.3 KB to 29.5 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
 ### 5.1.4 Score Board
 
+On click a pop-out will appear and fill the screen. The users game results will be logged to the score board. The player with the fastest time will be on top of the board and the ascending times descending the list.
+
 ![score mobile wireframe](assets/images-readme/score-mob.png)
+
 compressed from 42.1 KB to 12.7 KB via [TinyPNG](https://tinypng.com/)
 
 ![score tablet wireframe](assets/images-readme/score-pad.png)
+
 compressed from 40.4 KB to 12.0 KB via [TinyPNG](https://tinypng.com/)
 
 ![score laptop wireframe](assets/images-readme/score-lap.png)
+
 compressed from 61.2 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
 ### 5.1.5 Settings
 
+On click a pop-out will appear and fill the screen. The on/off switches will be operated by click. These control the sound and vibrations settings.
+
 ![settings mobile wireframe](assets/images-readme/set-mob.png)
+
 compressed from 41.5 KB to 13.1 KB via [TinyPNG](https://tinypng.com/)
 
 ![settings tablet wireframe](assets/images-readme/set-pad.png)
+
 compressed from 36.6 KB to 12.3 KB via [TinyPNG](https://tinypng.com/)
 
 ![settings laptop wireframe](assets/images-readme/set-lap.png)
+
 compressed from 62.6 KB to 22.4 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
 
 ### 5.1.6 Game completion
 
+When a game is completed a pop-out window will appear. The message will congratulate the user on their game and show the level they accomplished and the time they did it in.
+
 ![congratulations mobile wireframe](assets/images-readme/congr-mob.png)
+
 compressed from 50.0 KB to 16.3 KB via [TinyPNG](https://tinypng.com/)
 
 ![congratulations tablet wireframe](assets/images-readme/congr-pad.png)
+
 compressed from 43.7 KB to 13.9 KB via [TinyPNG](https://tinypng.com/)
 
 ![congratulations laptop wireframe](assets/images-readme/congr-lap.png)
+
 compressed from 64.5 KB to 22.1 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
