@@ -22,6 +22,7 @@ This website is designed to provide a fun, simple and well-balanced user experie
         * [5.1.4 Score Board](#514-score-board)
         * [5.1.5 Settings](#515-settings)
         * [5.1.6 Game completion](#516-game-completion)
+        * [5.1.7 Colours](#517-colours)
 
 
 
@@ -243,4 +244,22 @@ compressed from 43.7 KB to 13.9 KB via [TinyPNG](https://tinypng.com/)
 compressed from 64.5 KB to 22.1 KB via [TinyPNG](https://tinypng.com/)
 
 [Back to top](#contents)
+
+### 5.1.7 Colours
+
+The colours for the website are,
+
+Blue -  HEX #2B6684
+
+Yellow -  HEX #B59822
+
+Red -  HEX #BD3529
+
+Off White -  HEX #F7F6ED
+
+
+![colour selection](assets/images-readme/colours.png)
+
+compressed from 10.1 KB to 502 B via [TinyPNG](https://tinypng.com/)
+
 
