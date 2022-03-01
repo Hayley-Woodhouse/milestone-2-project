@@ -31,13 +31,22 @@ This website is designed to provide a fun, simple and well-balanced user experie
 
 ## 1.1 User Stories
 
--	I want to be able to have easy access and a clear understanding of the game.
--	I want to be able to record and review my scores and compare them against other users.
--	I want to have a difficultly leave to better my gaming performance.
--	I want to the game to be available on all devices so that the game can be played on the bus/train/waiting room etc.
--	I want a simple design that is easily readable and not overwhelming.
--	I want clear and concise rules of the game.
--	I don’t want a scrolling screen as this makes usability difficult and directly impacts the gaming performance.
+### Gamer's user stories
+
+
+1.  I want to be able to have easy access and a clear          understanding of the game.
+
+2.	I want to be able to record and review my scores and compare them against other users.
+
+3.	I want to be able to change the difficultly level to better my gaming performance.
+
+4.	I want the game to be available on all devices so that the game can be played on the bus/train/waiting room etc.
+
+5.	I want a simple design and layout that is easy to navigate and not overwhelming.
+
+6.	I want clear and concise rules of the game.
+
+7.	I don’t want a scrolling screen as this makes usability difficult and directly impacts the gaming performance.
 
 [Back to top](#contents)
 
@@ -72,7 +81,7 @@ This list of objectives is designed achieve a well-balanced website that meets t
 - Scoreboard
 - Social media and game logo
 - A static webpage with pop outs for scores, level settings, and instructions.
-- Game settings for removing sounds and vibration options.
+- Game settings for changing sounds.
 
 [Back to top](#contents)
 
@@ -211,7 +220,7 @@ compressed from 61.2 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)
 
 ### 5.1.5 Settings
 
-On click a pop-out will appear and fill the screen. The on/off switches will be operated by click. These control the sound and vibrations settings.
+On click a pop-out will appear and fill the screen. The on/off switches will be operated by click. These control the sound settings.
 
 ![settings mobile wireframe](assets/images-readme/set-mob.png)
 
