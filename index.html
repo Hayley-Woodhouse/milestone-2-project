@@ -6,39 +6,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Come and Play Match the Picture.">
     <meta name="keywords" content="game, picture, card, match, score board, win, fun">
-    <link rel="stylesheet" href="assets/css/style.css">
+<!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <!-- FAVICON -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon/favicon-16x16.png">
     <link rel="manifest" href="/site.webmanifest">
+<!-- CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Match the Picture</title>
 </head>
 <body>
-<!-- HEADER / NAVBAR -->
+    <!-- HEADER / NAVBAR -->
     <header>
-        <!-- DIFFICULTY BUTTON -->
-        <div>
-            <button onclick="myFunction()">Difficulty</button>
-            <div class="dropdown-content">
+        <nav class="nav-content">
+            <!-- DIFFICULTY BUTTON -->
+            <button onclick="diffFunction()" class="dropbtn">Difficulty</button>
+            <div id="myDropdown" class="dropdown-content">
                 <button>Easy</button>
                 <button>Medium</button>
                 <button>Hard</button>
             </div>
-        </div>
-        <!-- INSTRUCTIONS BUTTON -->
-        <div>
-            <button></button>
-        </div>
-        <!-- SCORES BUTTON -->
-        <div>
-            <button></button>
-        </div>
-        <!-- SETTINGS BUTTON -->  
-        <div>
-            <button></button>
-        </div>
-   
+            <!-- INSTRUCTIONS BUTTON -->
+            <div>
+                <button class="simp-btn">Instructions</button>   
+             </div>
+            <!-- SCORES BUTTON -->
+            <div>
+               <button class="simp-btn">Scores</button>
+            </div>
+            <!-- SETTINGS BUTTON -->  
+            <div>
+                <button class="simp-btn"><i class="fa-solid fa-gear"></i></button>
+            </div> 
+        </nav>
     </header>
 
 
@@ -46,4 +49,6 @@
 
 
     </footer>
+    <script src="assets/js/script.js"></script>
 </body>
+</html>
