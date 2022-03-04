@@ -1,11 +1,17 @@
+body {
+  margin: 0;
+}
+
+/*-- NAVBAR CONTENT --*/
 .nav-content {
   background-color: #B59822;
   padding: 60px;
+  
 }
 
 .dropbtn, .simp-btn {
     background-color: #2B6684;
-    color: white;
+    color: #F7F6ED;
     font-size: 16px;
     text-align: center;
     border-style: solid;
@@ -14,38 +20,61 @@
     text-decoration: none;
     float: left;
     margin-top: -24px;
-    margin-right: 20px;
+    margin-right: 60px;
     cursor: pointer;
   }
   
-  .dropbtn:hover, .dropbtn:focus, .simp-btn:hover, .simp-btn:focus {
+  .dropbtn:hover, .simp-btn:hover {
     background-color: #BD3529;
     border-color: #751f18;
-  }
-  
-  .dropdown {
-    position: relative;
-    display: inline-block;
   }
   
   .dropdown-content {
     display: none;
     border: none;
     position: absolute;
-    background-color: #f1f1f1;
-    min-width: 160px;
+    width: 124px;
+    margin-top: 28px;
     overflow: auto;
+    background-color: #F7F6ED;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
   }
-  
-  .dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
+
+  .e-btn {
+    background-color: #2B6684;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 7px 0 0 7px;
+    width: 110px;
+    border-style: solid;
+    border-color:#1b4053;
+    color: #F7F6ED;
+  }
+
+  .m-btn {
+    background-color: #B59822;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 7px 0 0 7px;
+    width: 110px;
+    border-style: solid;
+    border-color:#816d1a;
+    color: #F7F6ED;
+  }
+
+  .h-btn {
+    background-color: #BD3529;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    margin: 7px 0 7px 7px;
+    width: 110px;
+    border-style: solid;
+    border-color: #751f18;
+    color: #F7F6ED;
   }
   
-  .dropdown a:hover {background-color: #ddd;}
-  
-  .show {display: block;}
+
+  .show {display: grid;}
+
+  /*-- NAVBAR CONTENT END --*/
