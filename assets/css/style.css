@@ -1,17 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+
 body {
   margin: 0;
 }
 
 /*-- NAVBAR CONTENT --*/
-.nav-content {
+.nav-content{
   background-color: #B59822;
   padding: 60px;
-  
 }
 
-.dropbtn, .simp-btn {
+.dropbtn, .simp-btn, .hamDropbtn {
     background-color: #2B6684;
     color: #F7F6ED;
+    font-family: 'Ubuntu', sans-serif;
     font-size: 16px;
     text-align: center;
     border-style: solid;
@@ -22,14 +24,42 @@ body {
     margin-top: -24px;
     margin-right: 60px;
     cursor: pointer;
+    cursor: pointer;
+  }
+
+  .set-btn {
+    background-color: #2B6684;
+    color: #F7F6ED;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    text-align: center;
+    border-style: solid;
+    border-color: #1b4053;
+    padding: 15px 30px;
+    text-decoration: none;
+    float: right;
+    margin-top: -24px;
+    cursor: pointer;
   }
   
-  .dropbtn:hover, .simp-btn:hover {
+  .dropbtn:hover, .simp-btn:hover, .hamDropbtn:hover, .set-btn:hover{
     background-color: #BD3529;
     border-color: #751f18;
   }
   
   .dropdown-content {
+    display: none;
+    border: none;
+    position: absolute;
+    width: 124px;
+    margin: 28px 0 0 3px;
+    overflow: auto;
+    background-color: #F7F6ED;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+
+  .ham-dropdown-content {
     display: none;
     border: none;
     position: absolute;
@@ -41,8 +71,13 @@ body {
     z-index: 1;
   }
 
-  .e-btn {
+  .ham-dropdown-content {
+    display: none;
+  }
+
+  .e-btn, .insbtn {
     background-color: #2B6684;
+    font-family: 'Ubuntu', sans-serif;
     padding-top: 2px;
     padding-bottom: 2px;
     margin: 7px 0 0 7px;
@@ -52,8 +87,9 @@ body {
     color: #F7F6ED;
   }
 
-  .m-btn {
+  .m-btn, .scorbtn {
     background-color: #B59822;
+    font-family: 'Ubuntu', sans-serif;
     padding-top: 2px;
     padding-bottom: 2px;
     margin: 7px 0 0 7px;
@@ -63,8 +99,9 @@ body {
     color: #F7F6ED;
   }
 
-  .h-btn {
+  .h-btn, .setbtn {
     background-color: #BD3529;
+    font-family: 'Ubuntu', sans-serif;
     padding-top: 2px;
     padding-bottom: 2px;
     margin: 7px 0 7px 7px;
@@ -78,3 +115,61 @@ body {
   .show {display: grid;}
 
   /*-- NAVBAR CONTENT END --*/
+
+  @media screen and (max-width: 769px) {
+    .dropbtn, .simp-btn {
+      margin-right: 30px;
+    }
+    .nav-content{
+      padding: 46px; 
+    }
+  }
+
+  @media screen and (min-width: 426px) {
+    .navbar-two {
+      display: none;
+    }
+  }
+
+  @media  screen and (max-width: 425px) {
+    .navbar-one {
+      display: none;
+    }
+    .dropbtn {
+      margin: -30px 0 0 -20px;
+    }
+    .hamDropbtn {
+      margin: -50px 0 0 80%;
+    }
+    .dropdown-content {
+      margin: 22px 0 0 -17px;
+    }
+    .ham-dropdown-content {
+      margin: 24px 0 0 220px;
+    }
+  }
+
+  @media screen and (max-width: 375px) {
+    .ham-dropdown-content {
+      margin-left: 180px;
+    }
+    .dropbtn {
+      margin-left: -25px;
+    }
+    .dropdown-content {
+      margin-left: -22px;;
+    }
+  }
+
+  @media  screen and (max-width: 320px) {
+    .ham-dropdown-content {
+      margin-left: 136px;
+    }
+    .dropbtn {
+      margin-left: -35px;
+    }
+    .dropdown-content {
+      margin-left: -32px;
+    }
+    
+  }
