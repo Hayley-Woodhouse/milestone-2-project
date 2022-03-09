@@ -312,6 +312,10 @@ from [Google Fonts](https://fonts.google.com/)
 
 ## 6.1.3 Images
 
+The game will randomly select from a file of 25 images.
+These images can be viewed [here](IMAGES.md).
+
+
 ### Easy
 ---
 The game layout will comprise of a set of images that will increases in number depending on the level of difficulty. 
