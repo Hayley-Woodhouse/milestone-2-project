@@ -1,4 +1,16 @@
 
+let openWindow = document.getElementById('openWin').addEventListener('click', onBtn);
+let instructionsBtn = document.getElementById('openInfo');
+let howtoOff = document.getElementById("closeInfo").addEventListener('click', offBtn)
+
+function onBtn(){
+  instructionsBtn.style.display = 'block';
+}
+
+function offBtn(){
+  instructionsBtn.style.display = 'none';
+}
+
 
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
