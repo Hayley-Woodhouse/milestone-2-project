@@ -131,6 +131,7 @@ body {
   /*-- INSTUCTIONS --*/
 
   .inst-info {
+    display: none;
     text-align: center;
     background-color: aquamarine;
     margin: -22px 50px 0 50px;
