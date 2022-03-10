@@ -30,10 +30,6 @@ This website is designed to provide a fun, simple and well-balanced user experie
         * [6.1.3 Images](#613-images)
 
 
-
-
-
-
 # 1 UX Design
 
 ## 1.1 User Stories
