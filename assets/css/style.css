@@ -1,12 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
 
 body {
   margin: 0;
+  background-image: url(../images/wall-desk.jpg);
+  width: auto;
+  height: auto;
+  background-size: cover;
+  z-index: 0;
 }
 
 /*-- NAVBAR CONTENT --*/
 .nav-content{
-  background-color: #B59822;
+  background-color: #16161670;
   padding: 60px;
 }
 
@@ -14,32 +21,33 @@ body {
     background-color: #2B6684;
     color: #F7F6ED;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
     border-style: solid;
     border-color: #1b4053;
-    padding: 15px 30px;
+    padding: 5px 15px;
     text-decoration: none;
     float: left;
     margin-top: -24px;
     margin-right: 60px;
     cursor: pointer;
-    cursor: pointer;
+    border-radius: 10%;
   }
 
   .set-btn {
     background-color: #2B6684;
     color: #F7F6ED;
     font-family: 'Ubuntu', sans-serif;
-    font-size: 16px;
+    font-size: 24px;
     text-align: center;
     border-style: solid;
     border-color: #1b4053;
-    padding: 15px 30px;
+    padding: 5px 15px;
     text-decoration: none;
     float: right;
     margin-top: -24px;
     cursor: pointer;
+    border-radius: 10%;
   }
   
   .dropbtn:hover, .simp-btn:hover, .hamDropbtn:hover, .set-btn:hover{
@@ -52,11 +60,12 @@ body {
     border: none;
     position: absolute;
     width: 124px;
-    margin: 28px 0 0 3px;
+    margin: 34px 0 0 5px;
     overflow: auto;
     background-color: #F7F6ED;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px #2b6684;;
     z-index: 1;
+    border-radius: 10%;
   }
 
   .ham-dropdown-content {
@@ -67,8 +76,9 @@ body {
     margin-top: 28px;
     overflow: auto;
     background-color: #F7F6ED;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    box-shadow: 0px 8px 16px 0px #2b6684;;
     z-index: 1;
+    border-radius: 10%;
   }
 
   .ham-dropdown-content {
@@ -85,6 +95,7 @@ body {
     border-style: solid;
     border-color:#1b4053;
     color: #F7F6ED;
+    border-radius: 10%;
   }
 
   .m-btn, .scorbtn {
@@ -97,6 +108,7 @@ body {
     border-style: solid;
     border-color:#816d1a;
     color: #F7F6ED;
+    border-radius: 10%;
   }
 
   .h-btn, .setbtn {
@@ -109,12 +121,65 @@ body {
     border-style: solid;
     border-color: #751f18;
     color: #F7F6ED;
+    border-radius: 10%;
   }
-  
 
   .show {display: grid;}
 
   /*-- NAVBAR CONTENT END --*/
+
+  /*-- INSTUCTIONS --*/
+
+  .inst-info {
+    text-align: center;
+    background-color: aquamarine;
+    margin: -22px 50px 0 50px;
+    padding: 50px;
+  }
+  .inst-info h1 {
+    font-family: 'shadows into light', sans-serif;
+    font-size: 80px;
+    margin: 0;
+  }
+  .inst-info h2 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    margin: 20px 0 25px 0;
+  }
+  .inst-info p {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    margin: 0;
+  }
+  .inst-info button {
+    float: right;
+    background-color: #ff7f5000;
+    border: none;
+    font-size: 20px;
+  }
+  /*--  INSTRUCTIONS END --*/
+
+  /*-- FOOTER --*/
+  .social-media {
+    margin-left: 42.5%;
+    font-size: 30px;
+  }
+  .social-media a {
+    margin: 0 10px -10px 10px;
+    color: #f7f6ed;
+    text-decoration: none;
+  }
+  .developer {
+    display: inline;
+    font-size: 30px;
+  }
+  .developer h6 {
+    margin: -4px 0 0 0;
+    text-align: center;
+    color: aliceblue;
+  }
+
+
 
   @media screen and (max-width: 769px) {
     .dropbtn, .simp-btn {
@@ -122,6 +187,10 @@ body {
     }
     .nav-content{
       padding: 46px; 
+    }
+    .inst-info {
+      padding: 20px;
+      margin-top: 50px;
     }
   }
 
@@ -139,25 +208,39 @@ body {
       margin: -30px 0 0 -20px;
     }
     .hamDropbtn {
-      margin: -50px 0 0 80%;
+      margin: -43px 0 0 89%;;
     }
     .dropdown-content {
-      margin: 22px 0 0 -17px;
+      margin: 27px 0 0 -16px;
+      font-size: 20px;
     }
     .ham-dropdown-content {
-      margin: 24px 0 0 220px;
+      margin: 29px 0 0 228px;
+      font-size: 20px;
+    }
+    .inst-info {
+      margin: 10px;
+    }
+    .inst-info h1 {
+      font-size: 40px;
+    }
+    .inst-info h2{
+      font-size: 20px;
+    }
+    .inst-info p {
+      font-size: 16px;
     }
   }
 
   @media screen and (max-width: 375px) {
     .ham-dropdown-content {
-      margin-left: 180px;
+      margin-left: 185px;
     }
     .dropbtn {
       margin-left: -25px;
     }
     .dropdown-content {
-      margin-left: -22px;;
+      margin-left: -21px;;
     }
   }
 
@@ -169,7 +252,9 @@ body {
       margin-left: -35px;
     }
     .dropdown-content {
-      margin-left: -32px;
+      margin-left: -30px;
     }
-    
+    .inst-info {
+      padding: 20px 10px
+    }
   }
