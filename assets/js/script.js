@@ -1,15 +1,45 @@
 
-let openWindow = document.getElementById('openWin').addEventListener('click', onBtn);
+let instructionOpenWindow = document.getElementById('openWin').addEventListener('click', openBtn);
 let instructionsBtn = document.getElementById('openInfo');
-let howtoOff = document.getElementById("closeInfo").addEventListener('click', offBtn)
+let instructionClossBtn = document.getElementById("closeInfo").addEventListener('click', closeBtn);
+let hamInstruOpenWin = document.getElementById('hamInstBtn').addEventListener('click', openBtn);
+//const cards = ['beach','bicycle','boat','books','bowls','cars','crossing','door','fence','flowers','fruit','hot-air-balloon','house','leaves','man-basket','parrot','path','piano','pink-house','railing','rainbow','stairs','street','train','umbrella'];
+const easyCards = ['fruit','parrot','bicycle','pink-house','books','rainbow'];
+const easyGame = [...easyCards,...easyCards]
+const medCards = ['door','umbrella','hot-air-balloon','path','bowls','leaves','street','man-basket'];
+const hardCards = ['train','house','crossing','cars','railing','beach','fence','flowers','piano','stairs'];
+let pairs;
 
-function onBtn(){
+//const gameCards = document.getElementById('gameImages');
+let easyBtn = document.getElementById('easyGame').addEventListener('click', easy);
+
+let pictureArray = []
+
+
+function openBtn(){
   instructionsBtn.style.display = 'block';
 }
 
-function offBtn(){
+function closeBtn(){
   instructionsBtn.style.display = 'none';
 }
+
+function easy(){
+  for (let i = easyGame.length -1; i > 0; i--) {
+    let j = Math.floor(Math.random() * i)
+    let k = easyGame[i]
+    easyGame[i] = easyGame[j]
+    easyGame[j] = k
+    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${easyGame[i]}.jpg" alt="a image of the array"></li>`
+  }
+  document.getElementById('gameImages').childElementCount;
+  console.log()
+}
+
+
+
+
+
 
 
 /* When the user clicks on the button, 
