@@ -3,19 +3,21 @@ let instructionOpenWindow = document.getElementById('openWin').addEventListener(
 let instructionsBtn = document.getElementById('openInfo');
 let instructionClossBtn = document.getElementById("closeInfo").addEventListener('click', closeBtn);
 let hamInstruOpenWin = document.getElementById('hamInstBtn').addEventListener('click', openBtn);
-//const cards = ['beach','bicycle','boat','books','bowls','cars','crossing','door','fence','flowers','fruit','hot-air-balloon','house','leaves','man-basket','parrot','path','piano','pink-house','railing','rainbow','stairs','street','train','umbrella'];
 const easyCards = ['fruit','parrot','bicycle','pink-house','books','rainbow'];
-const easyGame = [...easyCards,...easyCards]
+const easySet = [...easyCards,...easyCards]
 const medCards = ['door','umbrella','hot-air-balloon','path','bowls','leaves','street','man-basket'];
+const medSet = [...medCards,...medCards];
 const hardCards = ['train','house','crossing','cars','railing','beach','fence','flowers','piano','stairs'];
-let pairs;
+const hardSet = [...hardCards,...hardCards];
 
-//const gameCards = document.getElementById('gameImages');
+
+/* EASY GAME BUTTON */
 let easyBtn = document.getElementById('easyGame').addEventListener('click', easy);
+let medBtn = document.getElementById('medGame').addEventListener('click', meduim);
+let hardBtn = document.getElementById('hardGame').addEventListener('click', hard);
 
-let pictureArray = []
 
-
+/* INSTUCTION BUTTON */
 function openBtn(){
   instructionsBtn.style.display = 'block';
 }
@@ -24,17 +26,85 @@ function closeBtn(){
   instructionsBtn.style.display = 'none';
 }
 
+/* SHUFFLE CARDS */
+function shuffle(array) {
+  let currentIndex = array.length,  randomIndex;
+
+  // While there remain elements to shuffle...
+  while (currentIndex != 0) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex--;
+
+    // And swap it with the current element.
+    [array[currentIndex], array[randomIndex]] = [
+      array[randomIndex], array[currentIndex]];
+  }
+
+  return array;
+}
+
+/** WHEN DIFFICULTY LEVEL SELECTED THE FUNCTION CALLS FOR A DUPLICATED IMAGES
+ * EASY CALLS 12 CARDS
+ */
 function easy(){
-  for (let i = easyGame.length -1; i > 0; i--) {
-    let j = Math.floor(Math.random() * i)
-    let k = easyGame[i]
-    easyGame[i] = easyGame[j]
-    easyGame[j] = k
-    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${easyGame[i]}.jpg" alt="a image of the array"></li>`
+  document.querySelector('#gameImages').classList.add('e-display');
+  shuffle(easySet)
+    for (let i = 0; i < easySet.length; i++){
+      document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${easySet[i]}.jpg" alt="a image of the array"></li>`
+    }
+  document.getElementById('gameImages').childElementCount;
+}
+/** THIS FUNCTIONS CALLS FOR 8 DUPLICATED IMAGES
+ * MEDIUM CALLS 16 CARDS
+ */
+function meduim(){
+  document.querySelector('#gameImages').classList.add('m-display');
+  shuffle(medSet)
+    for (let i =0; i < medSet.length; i++){
+    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${medSet[i]}.jpg" alt="a image of the array"></li>`
   }
   document.getElementById('gameImages').childElementCount;
-  console.log()
 }
+/** THIS FUNCTIONS CALLS FOR 10 DUPLICATED IMAGES
+ * MEDIUM CALLS 20 CARDS
+ */
+function hard(){
+  document.querySelector('#gameImages').classList.add('h-display');
+  shuffle(hardSet)
+    for (let i =0; i < hardSet.length; i++){
+    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${hardSet[i]}.jpg" alt="a image of the array"></li>`
+  }
+  document.getElementById('gameImages').childElementCount;
+}
+
+
+
+//var amountToGrab = 12
+// var chosen
+
+// function easy(){
+//   var chosen = []
+// do {
+//   var random = Math.floor(Math.random() * easyCards.length);
+//   var value = easyCards[random];
+ 
+// if (chosen.includes(value)){
+//   console.log('doesexists');
+//     } else {
+//       chosen.push(value);
+//       chosen.push(value);
+//       }
+//       shuffle(chosen)
+    
+// } while (chosen.length < 12);
+
+
+// for (var x = 0; x < chosen.length; ++x) {
+// console.log(chosen[x]);
+// }
+// }
 
 
 
@@ -45,16 +115,16 @@ function easy(){
 /* When the user clicks on the button, 
 toggle between hiding and showing the dropdown content */
 function diffFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
+    document.getElementById("diffDropdown").classList.toggle("show");
   }
   
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.dropbtn')) {
-      let dropdowns = document.getElementsByClassName("dropdown-content");
-      let i;
+      var dropdowns = document.getElementsByClassName("diff-dropdown-content");
+      var i;
       for (i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
+        var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
@@ -69,10 +139,10 @@ function diffFunction() {
   // Close the dropdown if the user clicks outside of it
   window.onclick = function(event) {
     if (!event.target.matches('.hamDropbtn')) {
-      let dropdowns = document.getElementsByClassName("ham-dropdown-content");
-      let i;
+      var dropdowns = document.getElementsByClassName("ham-dropdown-content");
+      var i;
       for (i = 0; i < dropdowns.length; i++) {
-        let openDropdown = dropdowns[i];
+        var openDropdown = dropdowns[i];
         if (openDropdown.classList.contains('show')) {
           openDropdown.classList.remove('show');
         }
