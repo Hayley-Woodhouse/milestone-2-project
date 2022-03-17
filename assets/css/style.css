@@ -54,7 +54,7 @@ body {
     border-color: #751f18;
   }
   
-  .dropdown-content {
+  .diff-dropdown-content {
     display: none;
     border: none;
     position: absolute;
@@ -162,6 +162,55 @@ body {
   }
   /*--  INSTRUCTIONS END --*/
 
+  /*--  GAME --*/
+
+  .game-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: fit-content;
+    margin: 0 auto;
+    clear: both;
+  }
+  ul {
+    padding: 1rem;
+    border-radius: 4px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    margin-top: 50px;
+    list-style-type: none;
+  }
+
+  ul li img {
+    width: 100px;
+    height: 100px;
+    margin: 16px;
+    box-shadow: 2px 2px 19px 2px #090a0a;
+    border-radius: 10px;
+  }
+
+  .e-display {
+    max-width: 650px;
+  }
+
+  .m-display {
+    max-width: 650px;
+  }
+
+  .h-display {
+    max-width: 700px;
+  }
+  
+
+
+
+  /*--  GAME END --*/
+
+
   /*-- FOOTER --*/
   footer {
     background-color: #16161670;
@@ -232,7 +281,7 @@ body {
       margin: -21px -11px 0 0;
       font-size: 20px;
     }
-    .dropdown-content {
+    .diff-dropdown-content {
       margin: 27px 0 0 -14px;
       font-size: 20px;
     }
@@ -264,13 +313,21 @@ body {
     .social-media {
       margin-right: 17px;
     }
+    .h-display {
+      max-width: max-content;
+    }
+    ul li img {
+      width: 66px;
+      height: 66px;
+      margin: 5px;
+    }
   }
 
   @media screen and (max-width: 375px) {
     .ham-dropdown-content {
       margin-left: 215px;
     }
-    .dropdown-content {
+    .diff-dropdown-content {
       margin-left: -14px;;
     }
   }
@@ -279,7 +336,7 @@ body {
     .ham-dropdown-content {
       margin-left: 162px;
     }
-    .dropdown-content {
+    .diff-dropdown-content {
       margin-left: -14px;
     }
     .inst-info {
@@ -290,5 +347,9 @@ body {
     }
     .developer a {
       margin-left: -12px;
+    }
+    ul li img {
+      width: 60px;
+      height: 60px;
     }
   }
