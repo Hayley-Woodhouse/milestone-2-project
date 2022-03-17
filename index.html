@@ -29,10 +29,10 @@
         <nav class="nav-content">
             <!-- DIFFICULTY BUTTON -->
             <button onclick="diffFunction()" class="dropbtn">Difficulty</button>
-            <div id="myDropdown" class="dropdown-content">
+            <div id="diffDropdown" class="diff-dropdown-content">
                 <button id="easyGame" class="e-btn">Easy</button>
-                <button class ="m-btn">Medium</button>
-                <button class="h-btn">Hard</button>
+                <button id="medGame" class ="m-btn">Medium</button>
+                <button id="hardGame" class="h-btn">Hard</button>
             </div>
             <div class="navbar-one">
                 <!-- INSTRUCTIONS BUTTON -->
@@ -83,9 +83,10 @@
 
     <!-- GAME-->
 
-    <ul id="gameImages" class="gameImages">
-        
-    </ul>
+    <div class="game-display">
+        <ul id="gameImages" class="gameImages">
+        </ul>
+    </div>
 
 
     <footer>
