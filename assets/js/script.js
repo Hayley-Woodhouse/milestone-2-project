@@ -11,11 +11,11 @@ const hardCards = ['train','house','crossing','cars','railing','beach','fence','
 const hardSet = [...hardCards,...hardCards];
 
 
+
 /* EASY GAME BUTTON */
 let easyBtn = document.getElementById('easyGame').addEventListener('click', easy);
 let medBtn = document.getElementById('medGame').addEventListener('click', meduim);
 let hardBtn = document.getElementById('hardGame').addEventListener('click', hard);
-
 
 /* INSTUCTION BUTTON */
 function openBtn(){
@@ -44,6 +44,7 @@ function shuffle(array) {
 
   return array;
 }
+let chosen = []
 
 /** WHEN DIFFICULTY LEVEL SELECTED THE FUNCTION CALLS FOR A DUPLICATED IMAGES
  * EASY CALLS 12 CARDS
@@ -52,7 +53,12 @@ function easy(){
   document.querySelector('#gameImages').classList.add('e-display');
   shuffle(easySet)
     for (let i = 0; i < easySet.length; i++){
-      document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${easySet[i]}.jpg" alt="a image of the array"></li>`
+
+      //adds array of random images
+      chosen.push(easySet[i])  
+      
+      //adds grey image to screen that has an id assicated with it  
+      document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
     }
   document.getElementById('gameImages').childElementCount;
 }
@@ -63,8 +69,13 @@ function meduim(){
   document.querySelector('#gameImages').classList.add('m-display');
   shuffle(medSet)
     for (let i =0; i < medSet.length; i++){
-    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${medSet[i]}.jpg" alt="a image of the array"></li>`
-  }
+
+      //adds array of random images
+      chosen.push(medSet[i]) 
+
+   //adds grey image to screen that has an id assicated with it  
+      document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
+    }
   document.getElementById('gameImages').childElementCount;
 }
 /** THIS FUNCTIONS CALLS FOR 10 DUPLICATED IMAGES
@@ -74,41 +85,98 @@ function hard(){
   document.querySelector('#gameImages').classList.add('h-display');
   shuffle(hardSet)
     for (let i =0; i < hardSet.length; i++){
-    document.querySelector('.gameImages').innerHTML += `<li><img src="assets/images/${hardSet[i]}.jpg" alt="a image of the array"></li>`
+      //adds array of random images
+      chosen.push(hardSet[i]) 
+
+    //adds grey image to screen that has an id assicated with it  
+    document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
   }
   document.getElementById('gameImages').childElementCount;
 }
 
 
+/////** GAME LOGIC */////////
 
-//var amountToGrab = 12
-// var chosen
+// //declaring global variables so they can be used throughout code
+let array1 =[]
+let onscreen = []
 
-// function easy(){
-//   var chosen = []
-// do {
-//   var random = Math.floor(Math.random() * easyCards.length);
-//   var value = easyCards[random];
- 
-// if (chosen.includes(value)){
-//   console.log('doesexists');
-//     } else {
-//       chosen.push(value);
-//       chosen.push(value);
-//       }
-//       shuffle(chosen)
+// START:  1st FUNCTION : Excepts to variables, the image (card) and the Images picture (cardSec)
+function match(card) {
+
+  //this is used to tell the algorithm what is displayed on the screen, used to find what cards to flip back
+  onscreen.push(card)
+
+  //these lines of code are used as the comparision (next if statement below)
+  array1.push(card.target.src)
+  let array2 = []
+  array2.push(card.target.src)
+  //creates new array of the card source
+  let gotit = array1.filter(element => array2.includes(element));
+  
+  //MATCHED: If matched there are images in the new array that have the same src
+  if(gotit[0] === gotit[1]){
+
+    card.target.classList.remove('turn','animate__animated','animate__flipInY');
+
+    gotit = []
+    array1 = []
+    array2 = []
+    onscreen = []
+
+  } else {
+  //UNMATCHED: Two images in the array but do not match
+    if(array1.length == 2 && array2.length == 1)  {
+      array1 = []
+      array2 = []
+
+      //send the unmatched cards to the function (close) that flips them back
+      for (x in onscreen){
+        close(onscreen[x])
+      };
+  }
+}
+}
+
+
+
+// Second FUNCTION: Flips the unmatched card back to orginal src
+
+function close(indicard){
+
+  if(indicard.target.className === 'turn animate__animated animate__flipInY')
+  {
+    setTimeout(function()  { 
+    //im just changing the CSS class back so they can be seleted again 
+    indicard.target.className = 'turn'
+    //and then switching the image back
+    indicard.target.src="assets/images/game-card.jpg"; }, 1000);
     
-// } while (chosen.length < 12);
+  } else {
+
+    //console.log('did match')
+
+  return null;
+
+  }
+  
+}
 
 
-// for (var x = 0; x < chosen.length; ++x) {
-// console.log(chosen[x]);
-// }
-// }
+
+document.addEventListener('click', (card) => {
+  if(card.target.className == 'turn'){
+    //console.log(card.target.src)
+    card.target.classList.add('animate__animated', 'animate__flipInY');
+    //as we now have an array of random images with a index and all the grey images have an id, we can just marry the two together
+    card.target.src=`assets/images/${chosen[card.target.id]}.jpg`
+    match(`${chosen[card.target.id]}`,card)
+  }
+});
 
 
 
-
+/////** END OF GAME LOGIC */////////
 
 
 
