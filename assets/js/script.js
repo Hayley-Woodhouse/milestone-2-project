@@ -102,7 +102,7 @@ let array1 =[]
 let onscreen = []
 
 // START:  1st FUNCTION : Excepts to variables, the image (card) and the Images picture (cardSec)
-function match(card) {
+function match(cardSrc, card) {
 
   //this is used to tell the algorithm what is displayed on the screen, used to find what cards to flip back
   onscreen.push(card)
