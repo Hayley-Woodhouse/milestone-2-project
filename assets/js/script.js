@@ -9,13 +9,15 @@ const medCards = ['door','umbrella','hot-air-balloon','path','bowls','leaves','s
 const medSet = [...medCards,...medCards];
 const hardCards = ['train','house','crossing','cars','railing','beach','fence','flowers','piano','stairs'];
 const hardSet = [...hardCards,...hardCards];
-
+let total 
 
 
 /* EASY GAME BUTTON */
 let easyBtn = document.getElementById('easyGame').addEventListener('click', easy);
 let medBtn = document.getElementById('medGame').addEventListener('click', meduim);
 let hardBtn = document.getElementById('hardGame').addEventListener('click', hard);
+
+
 
 /* INSTUCTION BUTTON */
 function openBtn(){
@@ -50,23 +52,28 @@ let chosen = []
  * EASY CALLS 12 CARDS
  */
 function easy(){
+  total = 6
+  document.querySelector('#gameImages').innerHTML = '';
   document.querySelector('#gameImages').classList.add('e-display');
+  document.querySelector('#gameImages').classList.remove('h-display');
   shuffle(easySet)
     for (let i = 0; i < easySet.length; i++){
 
       //adds array of random images
       chosen.push(easySet[i])  
       
-      //adds grey image to screen that has an id assicated with it  
+      //adds images to screen that has an id assicated with it  
       document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
     }
-  document.getElementById('gameImages').childElementCount;
 }
 /** THIS FUNCTIONS CALLS FOR 8 DUPLICATED IMAGES
  * MEDIUM CALLS 16 CARDS
  */
 function meduim(){
+  total = 8
+  document.querySelector('#gameImages').innerHTML = '';
   document.querySelector('#gameImages').classList.add('m-display');
+  document.querySelector('#gameImages').classList.remove('h-display');
   shuffle(medSet)
     for (let i =0; i < medSet.length; i++){
 
@@ -76,12 +83,13 @@ function meduim(){
    //adds grey image to screen that has an id assicated with it  
       document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
     }
-  document.getElementById('gameImages').childElementCount;
 }
 /** THIS FUNCTIONS CALLS FOR 10 DUPLICATED IMAGES
  * MEDIUM CALLS 20 CARDS
  */
 function hard(){
+  total = 10
+  document.querySelector('#gameImages').innerHTML = '';
   document.querySelector('#gameImages').classList.add('h-display');
   shuffle(hardSet)
     for (let i =0; i < hardSet.length; i++){
@@ -91,7 +99,7 @@ function hard(){
     //adds grey image to screen that has an id assicated with it  
     document.querySelector('.gameImages').innerHTML += `<li><img class='turn' id='${i}' src="assets/images/game-card.jpg" alt="a image of the array"></li>`
   }
-  document.getElementById('gameImages').childElementCount;
+  //document.getElementById('gameImages').childElementCount;
 }
 
 
@@ -100,6 +108,10 @@ function hard(){
 // //declaring global variables so they can be used throughout code
 let array1 =[]
 let onscreen = []
+
+//score 
+
+let current = ''
 
 // START:  1st FUNCTION : Excepts to variables, the image (card) and the Images picture (cardSec)
 function match(cardSrc, card) {
@@ -124,6 +136,14 @@ function match(cardSrc, card) {
     array2 = []
     onscreen = []
 
+    //adding score
+    current++;
+
+    //added score to page
+
+    document.getElementById('score').innerHTML = "You have matched"  + `${current}` + " / " + `${total}`;
+    congMessage()
+
   } else {
   //UNMATCHED: Two images in the array but do not match
     if(array1.length == 2 && array2.length == 1)  {
@@ -136,6 +156,14 @@ function match(cardSrc, card) {
       };
   }
 }
+}
+
+function congMessage() {
+   if(current === total) {
+   console.log('yay');
+  } else {
+    console.log('no')
+  }
 }
 
 
@@ -161,8 +189,6 @@ function close(indicard){
   }
   
 }
-
-
 
 document.addEventListener('click', (card) => {
   if(card.target.className == 'turn'){
