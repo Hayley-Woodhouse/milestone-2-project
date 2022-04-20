@@ -36,30 +36,17 @@
                 <button id="medGame" class ="m-btn">Medium</button>
                 <button id="hardGame" class="h-btn">Hard</button>
             </div>
-            <div class="navbar-one">
-                <!-- INSTRUCTIONS BUTTON -->
-                <div>
-                    <button id="openWin" class="simp-btn">Instructions</button>   
-                 </div>
-                <!-- SETTINGS BUTTON -->  
-                <div>
-                    <button class="set-btn"><i class="fa-solid fa-gear"></i></button>
-                </div> 
+            <!-- INSTRUCTIONS BUTTON -->
+            <div>
+                <button id="openWin" class="simp-btn">Instructions</button>   
             </div>
-            <button onclick="enableMute()" type="button">Mute sound</button>
-            <button onclick="disableMute()" type="button">Enable sound</button>
-
-            <div class="navbar-two">
-                <button onclick="hamFunction()" class="hamDropbtn"><i class="fa fa-bars"></i></button>
-                <div id="hamDropdown" class="ham-dropdown-content">
-                    <button id="hamInstBtn" class="insbtn">Instructions</button>  
-                    <button class="setbtn">Settings</button>
-                </div>
+            <!-- SOUND BUTTON -->  
+            <div>
+                <button class="set-btn"><i id="soundControl" class="fa-regular fa-volume-high"></i></button>
             </div> 
-
         </nav>
     </header>
-
+    <!-- INSTRUCTION WINDOW --> 
     <div id="openInfo" class="inst-info">
         <button id="closeInfo"><i class="fa-solid fa-xmark"></i></button>
         <h1>Match the Pictures</h1>
@@ -79,31 +66,23 @@
             Good luck and have fun!
         </p>
     </div>
-
-    <!-- GAME-->
-
+    <!-- OPEN PAGE WELCOME WINDOW-->
     <div id="welcome" class="wel-message">
-        <!-- <button id="closeWel"><i class="fa-solid fa-xmark"></i></button> -->
         <h2>Welcome to</h2>
         <h1>Match The Picture</h1>
         <br>
         <p>The game that will test your memory and recall!</p>
         <button id="StartGame" class="startGame">START GAME</button>
     </div>
-
-    
-
-  
-    
+    <!-- AUDIO -->
     <audio id="ting" src="assets/audio/Trolley bell 4.wav"></audio>
     <audio id="fireworks" src="assets/audio/Fireworks, rocket whistle with explosion.wav"></audio>
-    
+    <!-- GAME-->
     <div id="game" class="game-display">
         <ul id="gameImages" class="gameImages"></ul>
         <div class="score" id="score"></div>
     </div>
-    
-    <!--added menu to screen-->
+    <!-- NAME INPUT -->
     <div id="menu" class="menu">
         <p value="">Please Enter your Name:</p>
         <br>
@@ -115,19 +94,17 @@
         <button id="medGameStart"class="select">Medium</button>
         <button id="hardGameStart" class="select">Hard</button>
     </div>
-
-
+    <!-- CONGRATES COMPLETE GAME MESSAGE-->
     <div id="congrats"></div>
-
+    <!-- SCORES-->
     <div id="scores"></div>
-
+    <!-- PLAY AGAIN BUTTON RETURNS TO MAIN SCREEN -->
     <div id="playagain" class="playagain">
         <button id="playagainbut" class="">Play Again</button>
     </div>
-
-    
+    <!-- FOOTER-->
     <footer>
-        
+        <!-- SOCIAL MEDIA -->
         <div class="social-media">
             <a href="https://www.facebook.com/" rel="noopener" target="_blank">
                 <i class="fa-brands fa-instagram-square" aria-hidden="true"></i>
@@ -139,6 +116,7 @@
             <i class="fa-brands fa-twitter-square" aria-hidden="true"></i>
             </a>
         </div>
+        <!-- DEVELOPER INFORMATION-->
         <div class="developer">
             <h6>Designed and Devloped by</h6>
             <h6>Hayley Woodhouse</h6>
@@ -147,9 +125,7 @@
             </a>
         </div>
     </footer>
-
 <script src="assets/js/script.js" defer></script>
-   
 </body>
 </html>
 
