@@ -41,21 +41,18 @@
                 <div>
                     <button id="openWin" class="simp-btn">Instructions</button>   
                  </div>
-                <!-- SCORES BUTTON -->
-                <div>
-                <button class="simp-btn">Scores</button>
-                </div>
                 <!-- SETTINGS BUTTON -->  
                 <div>
                     <button class="set-btn"><i class="fa-solid fa-gear"></i></button>
                 </div> 
             </div>
+            <button onclick="enableMute()" type="button">Mute sound</button>
+            <button onclick="disableMute()" type="button">Enable sound</button>
 
             <div class="navbar-two">
                 <button onclick="hamFunction()" class="hamDropbtn"><i class="fa fa-bars"></i></button>
                 <div id="hamDropdown" class="ham-dropdown-content">
                     <button id="hamInstBtn" class="insbtn">Instructions</button>  
-                    <button class="scorbtn">Scores</button>
                     <button class="setbtn">Settings</button>
                 </div>
             </div> 
@@ -86,21 +83,46 @@
     <!-- GAME-->
 
     <div id="welcome" class="wel-message">
-        <button id="closeWel"><i class="fa-solid fa-xmark"></i></button>
-        <h1>Welcome to Match The Picture</h1>
-        <h2>The game that will test your memory and recall</h2>
+        <!-- <button id="closeWel"><i class="fa-solid fa-xmark"></i></button> -->
+        <h2>Welcome to</h2>
+        <h1>Match The Picture</h1>
+        <br>
+        <p>The game that will test your memory and recall!</p>
+        <button id="StartGame" class="startGame">START GAME</button>
     </div>
+
+    
+
+  
     
     <audio id="ting" src="assets/audio/Trolley bell 4.wav"></audio>
     <audio id="fireworks" src="assets/audio/Fireworks, rocket whistle with explosion.wav"></audio>
     
     <div id="game" class="game-display">
-        <ul id="gameImages" class="gameImages">
-        </ul>
+        <ul id="gameImages" class="gameImages"></ul>
         <div class="score" id="score"></div>
     </div>
+    
+    <!--added menu to screen-->
+    <div id="menu" class="menu">
+        <p value="">Please Enter your Name:</p>
+        <br>
+        <input class="box" type="text" id="myText" value="Name">
+        <br>
+        <p >Select Level</p>
+        <br>
+        <button id="easyGameStart" class="select">Easy</button>
+        <button id="medGameStart"class="select">Medium</button>
+        <button id="hardGameStart" class="select">Hard</button>
+    </div>
 
-    <div id="congrats">
+
+    <div id="congrats"></div>
+
+    <div id="scores"></div>
+
+    <div id="playagain" class="playagain">
+        <button id="playagainbut" class="">Play Again</button>
     </div>
 
     
