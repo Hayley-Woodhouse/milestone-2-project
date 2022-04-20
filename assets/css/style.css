@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  background-image: url(../images/wall-desk.jpg);
+  background-color: #cfd358;
   width: auto;
   height: auto;
   background-size: cover;
@@ -14,33 +14,33 @@ body {
 /*-- NAVBAR CONTENT --*/
 .nav-content{
   background-color: #16161670;
-  padding: 30px;
+  padding: 40px;
 }
 
 .dropbtn, .simp-btn, .hamDropbtn {
-    background-color: #2B6684;
+    background-color: #D358CF;
     color: #F7F6ED;
     font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     text-align: center;
     border-style: solid;
-    border-color: #1b4053;
+    border-color: #8e188a;
     padding: 5px 15px;
     text-decoration: none;
     float: left;
-    margin: -24px 30px 0 0;
+    margin: -22px 30px 0 0;
     cursor: pointer;
     border-radius: 10%;
   }
 
   .set-btn {
-    background-color: #2B6684;
+    background-color: #D358CF;
     color: #F7F6ED;
     font-family: 'Ubuntu', sans-serif;
     font-size: 24px;
     text-align: center;
     border-style: solid;
-    border-color: #1b4053;
+    border-color: #8e188a;
     padding: 5px 15px;
     text-decoration: none;
     float: right;
@@ -50,74 +50,44 @@ body {
   }
   
   .dropbtn:hover, .simp-btn:hover, .hamDropbtn:hover, .set-btn:hover{
-    background-color: #BD3529;
-    border-color: #751f18;
+    background-color: #e508de;
   }
   
   .diff-dropdown-content {
     display: none;
     border: none;
     position: absolute;
-    width: 124px;
-    margin: 34px 0 0 5px;
+    width: 100px;
+    margin: 21px 0 0 14px;
     overflow: auto;
     background-color: #F7F6ED;
     box-shadow: 0px 8px 16px 0px #2b6684;;
     z-index: 1;
-    border-radius: 10%;
   }
 
   .ham-dropdown-content {
     display: none;
     border: none;
     position: absolute;
-    width: 124px;
-    margin-top: 28px;
+    width: 100px;
+    margin: 17px 0 0 286px;
     overflow: auto;
     background-color: #F7F6ED;
     box-shadow: 0px 8px 16px 0px #2b6684;;
     z-index: 1;
-    border-radius: 10%;
   }
 
-  .e-btn, .insbtn {
-    background-color: #2B6684;
+  .e-btn, .insbtn, .m-btn, .h-btn, .setbtn{
+    padding: 5px 0 5px 0;
     font-family: 'Ubuntu', sans-serif;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin: 7px 0 0 7px;
-    width: 110px;
-    border-style: solid;
-    border-color:#1b4053;
-    color: #F7F6ED;
-    border-radius: 10%;
+    border: none;
+    font-size: 20px;
   }
 
-  .m-btn, .scorbtn {
-    background-color: #B59822;
-    font-family: 'Ubuntu', sans-serif;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin: 7px 0 0 7px;
-    width: 110px;
-    border-style: solid;
-    border-color:#816d1a;
-    color: #F7F6ED;
-    border-radius: 10%;
+  .e-btn:hover, .insbtn:hover, .m-btn:hover, .h-btn:hover, .setbtn:hover {
+    background-color: #CFD358;
   }
 
-  .h-btn, .setbtn {
-    background-color: #BD3529;
-    font-family: 'Ubuntu', sans-serif;
-    padding-top: 2px;
-    padding-bottom: 2px;
-    margin: 7px 0 7px 7px;
-    width: 110px;
-    border-style: solid;
-    border-color: #751f18;
-    color: #F7F6ED;
-    border-radius: 10%;
-  }
 
   .show {display: grid;}
 
@@ -125,42 +95,138 @@ body {
 
   /*-- INSTUCTIONS --*/
 
+  
+
   .inst-info {
     display: none;
     text-align: center;
-    background-color: aquamarine;
+    background-color: #58cfd3;;
     margin: 23px 100px 0 100px;
     padding: 50px;
     border-radius: 2%;
+    box-shadow: 2px 2px 19px 2px #090a0a;
   }
-  .inst-info h1 {
+  .inst-info h1, .wel-message h1 {
     font-family: 'shadows into light', sans-serif;
     font-size: 80px;
     margin: 0;
   }
-  .inst-info h2 {
+  .inst-info h2, .wel-message h2 {
     font-family: 'Ubuntu', sans-serif;
     font-size: 40px;
     margin: 20px 0 25px 0;
   }
-  .inst-info p {
+  .inst-info p, .wel-message p {
     font-family: 'Ubuntu', sans-serif;
     font-size: 20px;
     margin: 0;
   }
-  .inst-info button {
+  .inst-info button, #closeWel {
     float: right;
     background-color: #ff7f5000;
     border: none;
     font-size: 20px;
   }
 
-  #closeInfo:hover {
+  #closeInfo:hover, #closeWel:hover {
     color: #f7f6ed;
     background-color: rgb(78, 204, 162);
     border-radius: 10%;
   }
   /*--  INSTRUCTIONS END --*/
+
+  /*--  WELCOME --*/
+  
+  #welcome {
+    display: block;
+    background-color: #58cfd3;;
+    text-align: center;
+    margin: 100px 100px 0 100px;
+    padding: 50px;
+    border-radius: 2%;
+    position: sticky;
+    box-shadow: 2px 2px 19px 2px #090a0a;
+  }
+
+  .startGame{
+    margin-top: 10px;
+  }
+
+  .startGame, .select, #seeScores, #playagainbut{
+    cursor: pointer;
+    border-radius: 7%;
+    color: #F7F6ED;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 20px;
+    background-color: #4595be;
+    border-color: #2b6684;
+  }
+   /*--  WELCOME END --*/
+
+   /*--  ENTER NAME --*/
+
+  .menu {
+    display: none;
+    margin: 10px;
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: large;
+  }
+  .menu p {
+    margin-top: 40px;
+  }
+
+  .playagain {
+    display: none;
+    text-align: center;
+    margin-top: 100px;
+  }
+  
+  .box {
+    border-radius: 3px;
+    border-style: solid;
+    border-color: #1c1c0bb0;
+    height: 26px;
+  }
+  /*--  ENTER NAME END --*/
+
+  /*--  SCORES --*/
+  #scores {
+    text-align: center;
+    font-size: x-large;
+    text-transform: capitalize;
+    margin-top: 100px;
+    font-family: 'Ubuntu', sans-serif;
+  }
+
+  /*--  SCORES END--*/
+
+
+  /*--  CONGRATS MESSAGE --*/
+
+  #congrats {
+    display: none;
+    background-color: #58cfd3;;
+    text-align: center;
+    padding: 50px;
+    border-radius: 2%;
+    position: sticky;
+    z-index: 3;
+    margin: -480px 100px 0 100px;
+  }
+  
+  /*--  CONGRATS MESSAGE END --*/
+
+  /*-- MATCHED SCORE --*/
+
+  .score {
+    text-align: center;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: x-large;
+    margin-top: -15px;
+  }
+
+  /*-- MATCHED SCORE END --*/
 
   /*--  GAME --*/
 
@@ -186,26 +252,31 @@ body {
   }
 
   ul li img {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    height: 150px;
     margin: 16px;
     box-shadow: 2px 2px 19px 2px #090a0a;
     border-radius: 10px;
   }
 
   .e-display {
-    max-width: 650px;
+    margin-top: 174px;
+    max-width: 812px;
   }
 
   .m-display {
-    max-width: 650px;
+    margin-top: 120px;
+    max-width: 745px;
   }
 
   .h-display {
-    max-width: 700px;
+    margin-top: 120px;
+    max-width: 950px;
   }
   
-
+  .animate__animated, .animate__flipInY {
+    --animate-duration: 0.5s;
+  }
 
 
   /*--  GAME END --*/
@@ -217,6 +288,7 @@ body {
     position: absolute;
     bottom: 0;
     width: 100%;
+    padding: 5px 0 5px 0;
   }
   .social-media {
     float: right;
@@ -241,22 +313,59 @@ body {
   .developer a {
     color: inherit;
     margin-left: 20px;
-    
   }
-/*-- FOOTER END --*/
 
+  
+
+/*-- FOOTER END --*/
+ @media screen and (max-width: 1024px) {
+   .h-display{
+     margin-top: 7px;
+   }
+   .e-display {
+     margin-top: 105px;
+   }
+   .m-display {
+    margin-top: 21px;
+   }
+ }
 
   @media screen and (max-width: 769px) {
     .dropbtn, .simp-btn {
       margin-right: 30px;
     }
     .nav-content{
-      padding: 26px; 
+      padding: 32px; 
     }
     .inst-info {
       padding: 20px;
       margin: 23px 50px 0 50px;
     } 
+    .e-display {
+      margin-top: 70px;
+      max-width: 633px;
+    }
+    .h-display{
+      margin-top: 15px;
+    }
+    #welcome {
+      margin-top: 60px;
+      padding: 28px;
+    }
+    footer {
+      padding: 0;
+    }
+    ul li img {
+      width: 100px;
+      height: 100px;
+    }
+    .m-display{
+      max-width: 563px;
+      margin-top: 15px;
+    }
+    #congrats {
+      margin: -379px 50px 0 50px;
+    }
   }
 
   @media screen and (min-width: 426px) {
@@ -270,7 +379,7 @@ body {
       display: none;
     }
     .nav-content {
-      padding: 24px;
+      padding: 28px;
     }
     .dropbtn {
       margin: -21px 0 0 -11px;
@@ -282,23 +391,19 @@ body {
       font-size: 20px;
     }
     .diff-dropdown-content {
-      margin: 27px 0 0 -14px;
-      font-size: 20px;
+      margin: 18px 0 0 -3px;
     }
-    .ham-dropdown-content {
-      margin: 29px 0 0 265px;
-      font-size: 20px;
-    }
-    .inst-info {
+    .inst-info, #welcome {
       margin: 30px 30px 0 30px;
     }
-    .inst-info h1 {
+    .inst-info h1, .wel-message h1 {
       font-size: 40px;
     }
-    .inst-info h2{
+    .inst-info h2, .wel-message h2{
+      margin-top: 25px;
       font-size: 20px;
     }
-    .inst-info p {
+    .inst-info p, .wel-message p {
       font-size: 16px;
     }
     .developer h6 {
@@ -314,6 +419,7 @@ body {
       margin-right: 17px;
     }
     .h-display {
+      margin-top: 80px;
       max-width: max-content;
     }
     ul li img {
@@ -321,23 +427,42 @@ body {
       height: 66px;
       margin: 5px;
     }
+    .e-display {
+      max-width: 270px;
+    }
+    .m-display {
+      margin-top: 70px;
+      max-width: 350px;
+    }
+    .e-btn, .insbtn, .m-btn, .h-btn, .setbtn{
+      font-size: 15px;
+    }
+    #congrats {
+      margin-top: 305px;
+      padding: 16px;
+    }
+    #congrats h1 {
+      padding-top: 5px;
+    }
+    
   }
 
   @media screen and (max-width: 375px) {
     .ham-dropdown-content {
-      margin-left: 215px;
+      margin-left: 235px;
     }
     .diff-dropdown-content {
-      margin-left: -14px;;
+      margin-left: -3px;;
     }
+    
   }
 
   @media  screen and (max-width: 320px) {
     .ham-dropdown-content {
-      margin-left: 162px;
+      margin-left: 180px;
     }
     .diff-dropdown-content {
-      margin-left: -14px;
+      margin-left: -2px;
     }
     .inst-info {
       padding: 20px 10px
@@ -351,5 +476,8 @@ body {
     ul li img {
       width: 60px;
       height: 60px;
+    }
+    #congrats h1{
+      font-size: x-large;
     }
   }
