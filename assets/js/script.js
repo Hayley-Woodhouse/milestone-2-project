@@ -1,10 +1,29 @@
 
-let instructionOpenWindow = document.getElementById('openWin').addEventListener('click', openBtn);
+
 let instructionsBtn = document.getElementById('openInfo');
+let welcomeScreen = document.getElementById('welcome');
+let scoreBoard = document.getElementById('scores');
+let gameboard = document.getElementById('game');
+let menu = document.getElementById('menu');
+let final = document.getElementById('score');
+
+
+let instructionOpenWindow = document.getElementById('openWin').addEventListener('click', openBtn);
 let instructionCloseBtn = document.getElementById("closeInfo").addEventListener('click', closeBtn);
 let welcomeClose = document.getElementById("welcome").addEventListener('click', closeBtn);
-let congratsClose = document.getElementById("congrats").addEventListener('click', congratsCloseFN);
 let hamInstruOpenWin = document.getElementById('hamInstBtn').addEventListener('click', openBtn);
+
+let playagain = document.getElementById('playagain');
+let playagainbut = document.getElementById('playagain').addEventListener('click', playAgin)
+
+
+//added start game
+let easyGameStart = document.getElementById("easyGameStart").addEventListener('click', easy);
+let medGameStart = document.getElementById("medGameStart").addEventListener('click', meduim);
+let hardGameStart = document.getElementById("hardGameStart").addEventListener('click', hard);
+
+
+
 const easyCards = ['fruit','parrot','bicycle','pink-house','books','rainbow'];
 const easySet = [...easyCards,...easyCards]
 const medCards = ['door','umbrella','hot-air-balloon','path','bowls','leaves','street','man-basket'];
@@ -17,13 +36,29 @@ let startTime;
 let endTime;
 let score;
 
+let chosen = []
+let myname = ''
+
+// //declaring global variables so they can be used throughout code
+let array1 =[]
+let onscreen = []
+let current;
+
 /* EASY GAME BUTTON */
 let easyBtn = document.getElementById('easyGame').addEventListener('click', easy);
 let medBtn = document.getElementById('medGame').addEventListener('click', meduim);
 let hardBtn = document.getElementById('hardGame').addEventListener('click', hard);
 
+//
+let totalScores = new Map();
+
+let congrationsmenu;
+
 /* INSTUCTION BUTTON */
 function openBtn(){
+  welcomeScreen.style.display = 'none';
+  menu.style.display = 'none';
+  //welcomeClose.style.display = 'none'
   instructionsBtn.style.display = 'block';
   document.querySelector('#gameImages').innerHTML = '';
   document.querySelector('#gameImages').classList.remove('e-display');
@@ -32,12 +67,13 @@ function openBtn(){
 }
 
 function closeBtn(){
+  //unblock name and level
+  menu.style.display = 'block';
+
   instructionCloseBtn = document.getElementById("closeInfo")
   let welcomeClose = document.getElementById("welcome")
   instructionsBtn.style.display = 'none';
   welcomeClose.style.display = 'none';
-  
-
 }
 
 function congratsCloseFN(){
@@ -64,9 +100,12 @@ function shuffle(array) {
 
   return array;
 }
-let chosen = []
+
 
 function start() {
+  //block name and level
+  menu.style.display = 'none';
+  myname = document.getElementById("myText").value;
   startTime = new Date();
 };
 
@@ -79,6 +118,10 @@ function end() {
   // get seconds 
   var seconds = Math.round(timeDiff);
   score = seconds;
+
+  // //set scoreboard
+  totalScores.set(myname, score);
+
   console.log(seconds + " seconds");
 }
 
@@ -87,6 +130,14 @@ function end() {
  */
 
 function easy(){
+  current = 0
+  score = []
+  chosen = []
+  scoreBoard.style.display = 'none';
+  playagain.style.display = 'none';
+  final.style.display = 'none'
+  gameboard.style.display = 'block';
+  welcomeScreen.style.display = 'none'
   start();
   total = 6
   level = 'easy'
@@ -104,6 +155,14 @@ function easy(){
  * MEDIUM CALLS 16 CARDS
  */
 function meduim(){
+  current = 0
+  score = []
+  chosen = []
+  scoreBoard.style.display = 'none';
+  playagain.style.display = 'none';
+  final.style.display = 'none';
+  gameboard.style.display = 'block';
+  welcomeScreen.style.display = 'none';
   start();
   total = 8
   level = 'meduim'
@@ -120,6 +179,14 @@ function meduim(){
  * MEDIUM CALLS 20 CARDS
  */
 function hard(){
+  current = 0
+  score = []
+  chosen = []
+  scoreBoard.style.display = 'none';
+  playagain.style.display = 'none';
+  final.style.display = 'none'
+  gameboard.style.display = 'block';
+  welcomeScreen.style.display = 'none'
   start();
   total = 10
   level = 'hard'
@@ -140,18 +207,24 @@ function play() {
 function sound() {
   var fire = document.getElementById("fireworks");
   fire.play();
-  // var ting = document.getElementById("ting");
-  // ting.sound();
+}
+
+//sounds
+var ting = document.getElementById("ting");
+var fire = document.getElementById("fireworks");
+
+function enableMute() { 
+  ting.muted = true;
+  fire.muted = true;
+} 
+
+function disableMute() { 
+  ting.muted = false;
+  fire.muted = false;
 }
 /////** GAME LOGIC */////////
 
-// //declaring global variables so they can be used throughout code
-let array1 =[]
-let onscreen = []
 
-//score 
-
-let current = ''
 
 // START:  1st FUNCTION : Excepts to variables, the image (card) and the Images picture (cardSec)
 function match(cardSrc, card) {
@@ -162,6 +235,7 @@ function match(cardSrc, card) {
   //these lines of code are used as the comparision (next if statement below)
   array1.push(card.target.src)
   let array2 = []
+
   array2.push(card.target.src)
   //creates new array of the card source
   let gotit = array1.filter(element => array2.includes(element));
@@ -180,8 +254,8 @@ function match(cardSrc, card) {
     current++;
 
     //added score to page
-
-    document.getElementById('score').innerHTML = "You have matched"  + `${current}` + " / " + `${total}`;
+    final.style.display = 'block';
+    document.getElementById('score').innerHTML = `matched ${current} / ${total}`;
     congMessage()
 
   } else {
@@ -198,21 +272,55 @@ function match(cardSrc, card) {
 }
 }
 
+
+
 function congMessage() {
    if(current === total) {
     end();
     sound();
+    congrationsmenu = document.getElementById('congrats')
     document.getElementById('congrats').style.display = 'block';
     document.getElementById('congrats').innerHTML = `
     <button id="closeWel"><i class="fa-solid fa-xmark"></i></button>
     <h1>Congratulations!!</h1>
     <h2>Your a winner</h2>
-    <p>You completed the ${level} level in ${score} seconds.</p>`;
+    <p>${myname} You completed the ${level} level in ${score} seconds.</p>
+    <button id="eeScores" onclick=showscores()>See Scores</button>`;
+    
+    
 
   } else {
     console.log('no')
   }
 }
+
+function showscores(){
+
+  if(scoreBoard.style.display == 'none'){
+      scoreBoard.style.display = 'block';
+      playagain.style.display = 'block';
+      congrationsmenu.style.display = 'none';
+      gameboard.style.display = 'none';
+
+      totalScores.forEach( (value, key, map) => {
+         scoreBoard.innerHTML = `${key} , ${value} , ${level} `
+      });
+    
+  }
+
+  // playagain.style.display = 'block';
+  // congrationsmenu.style.display = 'none';
+  // gameboard.style.display = 'none';
+
+  // totalScores.forEach( (value, key, map) => {
+  //   scoreBoard.innerHTML = `${key} , ${value} , ${level} `
+  // });
+}
+
+function playAgin(){
+  location.reload();
+}
+
 
 // Second FUNCTION: Flips the unmatched card back to orginal src
 
