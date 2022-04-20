@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-
 body {
   margin: 0;
   background-color: #cfd358;
@@ -17,7 +16,7 @@ body {
   padding: 40px;
 }
 
-.dropbtn, .simp-btn, .hamDropbtn {
+.dropbtn, .simp-btn {
     background-color: #D358CF;
     color: #F7F6ED;
     font-family: 'Ubuntu', sans-serif;
@@ -49,7 +48,7 @@ body {
     border-radius: 10%;
   }
   
-  .dropbtn:hover, .simp-btn:hover, .hamDropbtn:hover, .set-btn:hover{
+  .dropbtn:hover, .simp-btn:hover, .set-btn:hover{
     background-color: #e508de;
   }
   
@@ -88,14 +87,11 @@ body {
     background-color: #CFD358;
   }
 
-
   .show {display: grid;}
 
   /*-- NAVBAR CONTENT END --*/
 
   /*-- INSTUCTIONS --*/
-
-  
 
   .inst-info {
     display: none;
@@ -163,6 +159,10 @@ body {
   }
    /*--  WELCOME END --*/
 
+   i.fa-regular.fa-volume-high, i.fa-regular.fa-volume-xmark {
+    font-weight: 700;
+  }
+
    /*--  ENTER NAME --*/
 
   .menu {
@@ -191,6 +191,7 @@ body {
   /*--  ENTER NAME END --*/
 
   /*--  SCORES --*/
+
   #scores {
     text-align: center;
     font-size: x-large;
@@ -200,7 +201,6 @@ body {
   }
 
   /*--  SCORES END--*/
-
 
   /*--  CONGRATS MESSAGE --*/
 
@@ -239,6 +239,7 @@ body {
     margin: 0 auto;
     clear: both;
   }
+
   ul {
     padding: 1rem;
     border-radius: 4px;
@@ -278,9 +279,7 @@ body {
     --animate-duration: 0.5s;
   }
 
-
   /*--  GAME END --*/
-
 
   /*-- FOOTER --*/
   footer {
@@ -290,34 +289,42 @@ body {
     width: 100%;
     padding: 5px 0 5px 0;
   }
+
   .social-media {
     float: right;
     font-size: 30px;
     margin-right: 30px;
   }
+
   .social-media a {
     color: #f7f6ed;
     text-decoration: none;
     margin-left: 10px;
   }
+
   .developer {
     font-size: 30px;
     color: #f7f6ed;
     margin-left: 30px;
     display: inline-flex;
   }
+
   .developer h6 {
     margin: 7px 0 0 0;
     font-size: small;
   }
+
   .developer a {
     color: inherit;
     margin-left: 20px;
   }
 
-  
-
 /*-- FOOTER END --*/
+
+/*-- MEDIA QUIRIES --*/
+
+/*-- MEDIA 1024PX --*/
+
  @media screen and (max-width: 1024px) {
    .h-display{
      margin-top: 7px;
@@ -330,9 +337,11 @@ body {
    }
  }
 
+ /*-- MEDIA 769PX --*/
   @media screen and (max-width: 769px) {
     .dropbtn, .simp-btn {
       margin-right: 30px;
+      font-size: 20px;
     }
     .nav-content{
       padding: 32px; 
@@ -361,34 +370,28 @@ body {
     }
     .m-display{
       max-width: 563px;
-      margin-top: 15px;
+      margin-top: -14px;
     }
     #congrats {
       margin: -379px 50px 0 50px;
     }
-  }
-
-  @media screen and (min-width: 426px) {
-    .navbar-two {
-      display: none;
+    .diff-dropdown-content {
+      margin: 16px 0 0 9px;
     }
   }
 
+  /*-- MEDIA 425PX --*/
   @media  screen and (max-width: 425px) {
-    .navbar-one {
-      display: none;
-    }
     .nav-content {
       padding: 28px;
     }
     .dropbtn {
-      margin: -21px 0 0 -11px;
-      font-size: 20px;
+      margin: -17px 0 0 -11px;
+      font-size: 16px;
     }
-    .hamDropbtn {
-      float: right;
-      margin: -21px -11px 0 0;
-      font-size: 20px;
+    .simp-btn {
+      margin: -17px 0px 0 10px;
+      font-size: 16px;
     }
     .diff-dropdown-content {
       margin: 18px 0 0 -3px;
@@ -444,25 +447,35 @@ body {
     #congrats h1 {
       padding-top: 5px;
     }
-    
+    .set-btn {
+      padding: 1px 7px;
+      margin: -18px -12px 0 0;
+    }
+    #soundControl {
+      font-size: 17px;
+    }
+    .diff-dropdown-content {
+      margin: 15px 0 0 -11px;
+    }
   }
 
+  /*-- MEDIA 375PX --*/
   @media screen and (max-width: 375px) {
     .ham-dropdown-content {
       margin-left: 235px;
     }
     .diff-dropdown-content {
       margin-left: -3px;;
-    }
-    
+    } 
   }
 
+  /*-- MEDIA 320PX --*/
   @media  screen and (max-width: 320px) {
     .ham-dropdown-content {
       margin-left: 180px;
     }
     .diff-dropdown-content {
-      margin-left: -2px;
+      margin-left: -11px;
     }
     .inst-info {
       padding: 20px 10px
@@ -481,3 +494,4 @@ body {
       font-size: x-large;
     }
   }
+  /*-- MEDIA QUIRIES END --*/
