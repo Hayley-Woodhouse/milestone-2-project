@@ -28,6 +28,11 @@ This website is designed to provide a fun, simple and well-balanced user experie
         * [6.1.1 Colour](#611-colours)
         * [6.1.2 Typography](#612-typography)
         * [6.1.3 Images](#613-images)
+* [7 Complete Game](#7-complete-game)
+* [8 Testing](#8-testing)
+* [9 Technologies used](#9-technologies-used)
+* [10 Credits](#10-credits)
+* [Acknowledgements](#11-acknowledgements)
 
 
 # 1 UX Design
@@ -148,58 +153,45 @@ The wireframes for the website was created using [Balsamiq Wireframes]( https://
 
 ### 5.1.1 Opening Page
 
-The pop-up user login will contain a skip option. If the user enters a name into the field, then this will be referred to when the results of the played game are added to the score board. If the user clicks skip, then the score board will register the username “unknown”.
+The opening popout window will wlcome users to the game. The user then moves on a input where the user can enters a name into the field, then this will be referred to when the results of the played game are added to the score board. If the user skip the name field, then the score board will register the username “name”.
 
-![user mobile wireframe](assets/images-readme/user-mob.png)\
-*compressed from 51.1 KB to 16.6 KB via [TinyPNG](https://tinypng.com/)*
+![welcome message](assets/images-readme/wel-screenshot.png)\
+*compressed from 58.8 KB to 20.0 KB via [TinyPNG](https://tinypng.com/)*
 
-![user tablet wirefreme](assets/images-readme/user-pad.png)\
-*compressed from 48.8 KB to 16.1KB via [TinyPNG](https://tinypng.com/)*
-
-![user laptop wireframe](assets/images-readme/user-lap.png)\
-*compressed from 69.8 KB to 24.4 KB via [TinyPNG](https://tinypng.com/)*
 
 [Back to top](#contents)
 
 ### 5.1.2 Layout
 
-When the opening page pop-up has be completed the user will be presented with the simple screen layout. A default game set at difficulty ‘easy’ will be ready to start. The time will be set to 0.00 and will begin with the click of the first card. 
+When the opening page pop-up has be completed the user will be presented with the simple screen layout. A default game set at difficulty ‘easy’ will be ready to start. A timer will record the length of play. 
 
 ### Navbar
 
 The nav bar will have four options 
 1 difficulty level
 2 instructions 
-3 scores
-4 settings 
+3 sound control 
 
 Difficulty level can be change via a dropdown menu with three options. Easy, medium, and hard. 
 
-![large screen navbar](assets/images-readme/nav1-wireframe.png)\
-*compressed from 18.1 KB to 5.1 KB via [TinyPNG](https://tinypng.com/)*
+The sounds will be able to be switch off on click of the sound icon
 
-When viewed on a small screen device a hamburger menu will apear with a drop down list of the navbar elements.
+![screen navbar](assets/images-readme/nav-screenshot.png)\
+*compressed from 16.9 KB to 4.8 KB via [TinyPNG](https://tinypng.com/)*
 
-![small screen navbar](assets/images-readme/nav2-wireframe.png)\
-*compressed from 10.6 KB to 1.8 KB via [TinyPNG](https://tinypng.com/)*
 
 ### Game Layout
 
 The difficulty level will determine how many cards are to be played. 
 
 The easy level will deal 12 cards for the player to match 6 pictures.
-![easy layout](assets/images-readme/easy-layout.png)\
-*compressed from 70.1 KB to 22.7 KB via [TinyPNG](https://tinypng.com/)*
 
 The medium level will deal 16 cards for 8 matches.
 
-![medium layout](assets/images-readme/med-layout.png)\
-*compressed from 67.9 KB to 21.7 KB via [TinyPNG](https://tinypng.com/)*
-
 The hard level will deal 24 cards for 12 matches
 
-![hard layout](assets/images-readme/hard-layout.png)\
-*compressed from 83.9 KB to 26.9 KB via [TinyPNG](https://tinypng.com/)*
+![layout](assets/images-readme/layout-screenshot.png)\
+*compressed from 143.5 KB to 47.3 KB via [TinyPNG](https://tinypng.com/)*
 
 
 ### Footer
@@ -217,29 +209,14 @@ The footer comprises of three social media links. Twitter, Facebook, and Instagr
 On click a pop-out will appear and fill the screen. The information will give context as to the operation of the game, how to change settings, difficulty and to check scores. 
 
 
-![instructions mobile wireframe](assets/images-readme/inst-mob.png)\
-*compressed from 68.5 KB to 24.8 KB via [TinyPNG](https://tinypng.com/)*
-
-![instructions tablet wireframe](assets/images-readme/inst-pad.png)\
-*compressed from 67.0 KB to 23.3 KB via [TinyPNG](https://tinypng.com/)*
-
-![instructions laptop wireframe](assets/images-readme/inst-lap.png)\
+![instructions wireframe](assets/images-readme/inst-screenshot%2Cpng.png)\
 *compressed from 81.3 KB to 29.5 KB via [TinyPNG](https://tinypng.com/)*
 
 [Back to top](#contents)
 
 ### 5.1.4 Score Board
 
-On click a pop-out will appear and fill the screen. The users game results will be logged to the score board. The player with the fastest time will be on top of the board and the ascending times descending the list.
-
-![score mobile wireframe](assets/images-readme/score-mob.png)\
-*compressed from 42.1 KB to 12.7 KB via [TinyPNG](https://tinypng.com/)*
-
-![score tablet wireframe](assets/images-readme/score-pad.png)\
-*compressed from 40.4 KB to 12.0 KB via [TinyPNG](https://tinypng.com/)*
-
-![score laptop wireframe](assets/images-readme/score-lap.png)\
-*compressed from 61.2 KB to 20.3 KB via [TinyPNG](https://tinypng.com/)*
+On click a pop-out will appear and fill the screen. The users game results will be logged to the score board. 
 
 [Back to top](#contents)
 
@@ -247,29 +224,12 @@ On click a pop-out will appear and fill the screen. The users game results will 
 
 On click a pop-out will appear and fill the screen. The on/off switches will be operated by click. These control the sound settings.
 
-![settings mobile wireframe](assets/images-readme/set-mob.png)\
-*compressed from 41.5 KB to 13.1 KB via [TinyPNG](https://tinypng.com/)*
-
-![settings tablet wireframe](assets/images-readme/set-pad.png)\
-*compressed from 36.6 KB to 12.3 KB via [TinyPNG](https://tinypng.com/)*
-
-![settings laptop wireframe](assets/images-readme/set-lap.png)\
-*compressed from 62.6 KB to 22.4 KB via [TinyPNG](https://tinypng.com/)*
-
-[Back to top](#contents)
-
 ### 5.1.6 Game completion
 
 When a game is completed a pop-out window will appear. The message will congratulate the user on their game and show the level they accomplished and the time they did it in.
 
-![congratulations mobile wireframe](assets/images-readme/congr-mob.png)\
+![congratulations wireframe](assets/images-readme/congrats-sceenshot.png)\
 *compressed from 50.0 KB to 16.3 KB via [TinyPNG](https://tinypng.com/)*
-
-![congratulations tablet wireframe](assets/images-readme/congr-pad.png)\
-*compressed from 43.7 KB to 13.9 KB via [TinyPNG](https://tinypng.com/)*
-
-![congratulations laptop wireframe](assets/images-readme/congr-lap.png)\
-*compressed from 64.5 KB to 22.1 KB via [TinyPNG](https://tinypng.com/)*
 
 [Back to top](#contents)
 
@@ -281,19 +241,10 @@ The visual design used within the website covers the colour, font type, effects,
 
 ### 6.1.1 Colours
 
-The colours for the website are,
+The colours seleted for the website were choosen using [Tools Pic Art](https://tools.picsart.com/color/wheel/). These are,
 
-Blue -  HEX #2B6684
-
-Yellow -  HEX #B59822
-
-Red -  HEX #BD3529
-
-Off White -  HEX #F7F6ED
-
-
-![colour selection](assets/images-readme/colours.png)
-*compressed from 10.1 KB to 502 B via [TinyPNG](https://tinypng.com/)*
+![colour selection](assets/images-readme/colour-select.png)
+*compressed from 39.8 KB to 12.6 KB via [TinyPNG](https://tinypng.com/)*
 
 ## 6.1.2 Typography
 
@@ -312,108 +263,146 @@ The game will randomly select from a file of 25 images.
 These images can be viewed [here](IMAGES.md).
 
 
-### Easy
+### Game Card Image
 ---
 The game layout will comprise of a set of images that will increases in number depending on the level of difficulty. 
 
 The easy level will have a set of 6 duplicated images, 12 in total. 
 
-The overlaying image will have the business logo and will differ in colour each time the difficulty level is changed. For the easy level the colour is blue.
+The meduim level will have a set of 8 duplicated images, 16 in total.
+
+The hard level will have a set of 10 duplicated images, 20 in total.
+
+The overlaying image will have the business logo 
 
 <details>
 <summary>Image design</summary>
 <br>
-The easy card was created using [Pixlr](https://pixlr.com/) and the image design was as follows.
+The game card was created using [Pixlr](https://pixlr.com/) and the image design was as follows.
 
 Text “match” and “pictures”
 -	Font - Baileyns
--	Colour - #F8F3D1
+-	Colour - #191914
 
 Text “the”
--	Font – GOORRAATT
--	Colour - #01213D
-
-Lines
--	Colour - #4BA8C7
+-	Font – Sweeneey
+-	Colour – gardient #D358CF and #CFD358
 
 Background
--	Colour - #2B6684
-![easy sreenshot](assets/images-readme/easy-screen.png)
-*compressed from 117.5 KB to 33.5 KB via [TinyPNG](https://tinypng.com/)*
+-	Colour - #58CFD3
+![easy sreenshot](assets/images-readme/gamecard-tool.png)
+*compressed from 184.4 KB to 45.7 KB via [TinyPNG](https://tinypng.com/)*
 </details>
 <br>
 
-![easy card](assets/images-readme/card-easy.jpg)
-*compressed from 82.7 KB to 52.6 KB via [TinyPNG](https://tinypng.com/)*
-
-### Medium
----
-
-The medium level will have a set of 8 duplicated images, 16 in total.
-
-The overlaying image will have the business logo and will differ in colour each time the difficulty level is changed. For the easy level the colour is yellow.
+![easy card](assets/images-readme/game-card.jpg)
+*compressed from 82.4 KB to 52.9 KB via [TinyPNG](https://tinypng.com/)*
 
 
-<details>
-<summary>Image design</summary>
-<br>
-The medium card was created using [Pixlr](https://pixlr.com/) and the image design was as follows.
+# 7 Complete Game
 
-Text “match” and “pictures”
--	Font - Baileyns
--	Colour - #F8F3D1
+The Games opening page has a pop up window, that guides users to the start button that on click removes the welcome window and displays a input field.
 
-Text “the”
--	Font – GOORRAATT
--	Colour - #4F4104
+![open page](assets/images-readme/open-page.png)
+*compressed from 60.0 KB to 15.8 KB via [TinyPNG](https://tinypng.com/)*
 
-Lines
--	Colour - #F0E561
+The input field allows users to input their name. This will be displayed in the game scores section If a name is not enter the default value 'name' will be inputted. They can also select a game level.
 
-Background
--	Colour - #B59818
-![meduim sreenshot](assets/images-readme/med-screen.png)
-*compressed from 147.3 KB to 39.0 KB via [TinyPNG](https://tinypng.com/)*
-</details>
-<br>
+![user name](assets/images-readme/username-lev-select.png)
+*compressed from 38.1 KB to 8.6 KB via [TinyPNG](https://tinypng.com/)*
 
-![meduim card](assets/images-readme/card-med.jpg)
-*compressed from 77.2 KB to 48.2 KB via [TinyPNG](https://tinypng.com/)*
-
-### Hard
----
-
-The hard level will have a set of 12 duplicated images, 24 in total.
-
-The overlaying image will have the business logo and will differ in colour each time the difficulty level is changed. For the easy level the colour is red.
-
-<details>
-<summary>Image design</summary>
-<br>
-Text “match” and “pictures”
--	Font - Baileyns
--	Colour - #F8F3D1
-
-Text “the”
--	Font – GOORRAATT
--	Colour – #670D00
-
-Lines
--	Colour – #F67B7A
-
-Background
--	Colour - #BD3529
-![hard screenshot](assets/images-readme/hard-screen.png)
-*compressed from 117.8 KB to 33.5 KB via [TinyPNG](https://tinypng.com/)*
-</details>
-<br>
-
-![hard card](assets/images-readme/card-hard.jpg)
-*compressed from 81.9 KB to 50.0 KB via [TinyPNG](https://tinypng.com/)*
+[Back to top](#contents)
 
 
+Once a level is selected the cards, which are set to randomly shuffle, will appear onscreen.
+At any point within the game the user can change the difficulty by using the top difficulty button to render a new game. At the bottom of the game a matched total will appear to display the users progress throught the game.
 
+Easy set
 
+![easy level](assets/images-readme/easy-level.png)
+*compressed from 280.5 KB to 58.7 KB via [TinyPNG](https://tinypng.com/)*
 
+Medium set
 
+![medium level](assets/images-readme/med-level.png)
+*compressed from 415.7 KB to 75.7 KB via [TinyPNG](https://tinypng.com/)*
+
+Hard set
+
+![hard level](assets/images-readme/hard-level.png)
+*compressed from 365.6 KB to 74.8 KB via [TinyPNG](https://tinypng.com/)*
+
+[Back to top](#contents)
+
+When the game is complete the congratulations message window will appear. It will input the username the level the game was played and the time the play took to complete the game.
+
+![congratalation](assets/images-readme/congrats-message.png)
+*compressed from 497.4 KB to 98.0 KB via [TinyPNG](https://tinypng.com/)*
+
+[Back to top](#contents)
+
+When the user clicks the See Score they can view their game score.
+
+![scoreboard](assets/images-readme/Score-display.png)
+*compressed from 33.9 KB to 7.7 KB via [TinyPNG](https://tinypng.com/)*
+
+[Back to top](#contents)
+
+The 'Play Again' button resets the game back to the beginning. 
+
+The instructions button produces a pop-out window that provides the user with a discription as to how to play the game.
+
+The sounds can be turned off onclick of the icon in the top right corner.
+
+The sounds used where from [Audio micro](https://www.audiomicro.com/).
+- trolley bell 4 when a match is made.
+- Fireworks, rocket whistle for the congratulation window.
+
+![Instructions](assets/images-readme/instruc-message.png)
+*compressed from 103.4 KB to 24.0 KB via [TinyPNG](https://tinypng.com/)*
+
+[Back to top](#contents)
+
+# 8 Testing
+
+Click the [link](TESTING.md) for testing.
+
+[Back to top](#contents)
+
+# 9 Technologies used
+- [HTML 5](https://en.wikipedia.org/wiki/HTML5) 
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+- [JS](https://en.wikipedia.org/wiki/JavaScript)
+- [Balsamiq](https://balsamiq.com/wireframes/desktop/#)
+- [gitpod](https://www.gitpod.io/)
+- [github](https://github.com/Hayley-Woodhouse/Milestone-1-project)
+- [W3 Schools](https://www.w3schools.com/)
+- [MND web docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+
+[Back to top](#contents)
+
+# 10 Credits
+
+- [Font awesome](https://fontawesome.com/) was used for all icons.
+- [Google fonts](https://fonts.google.com/) was used for the fonts within the website.
+- [Pixlr](https://pixlr.com/x/#search) For all images used throughout the website.
+- [Audio micro](https://www.audiomicro.com/free-sound-effects/free-electronics) was used for the sounds
+- [Favicon](https://favicon.io/emoji-favicons/cocktail-glass/) was used for the favicon image.
+- [W3S](https://validator.w3.org/) was used to validate the html and css files.
+
+[Back to top](#contents)
+
+# 11 Acknowledgements
+
+This web site was created for the second milestone project for the full stack development diploma with the code instatute and harlow college.
+
+With thanks to 
+
+Precious Ljege for the mentor assistants, advice and support.
+
+Philip Morris for the tuition and guidence.
+
+Richard Woodhouse for support and user testing.
+
+[Back to top](#contents)
 
