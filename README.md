@@ -2,6 +2,9 @@
 
 This website is designed to provide a fun, simple and well-balanced user experience. The game premise is a simple, well-known, recognisable picture matching game. The users are timed and pitted against other players on the scoreboard. The changeable game levels allow users to increase the difficult and improve their game performance.
 
+![website rendering](assets/images-readme/website-view.png)
+
+Play match the picture [here](https://hayley-woodhouse.github.io/milestone-2-project/)
 # Contents
 * [1 UX Design](#1-ux-design)
     * [1.1 User Stories](#11-user-stories)
